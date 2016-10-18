@@ -83,28 +83,28 @@ author:
   location         : "Cambridge, MA"
   email            :
   uri              : "http://davebenvenuti.me"
-  bitbucket        : "https://bitbucket.org/davebenvenuti"
+  bitbucket        : "davebenvenuti"
   codepen          :
   dribbble         :
-  flickr           : "https://flickr.com/dave.benvenuti"
+  flickr           : "dave.benvenuti"
   facebook         :
   foursquare       :
-  github           : "https://github.com/davebenvenuti"
-  google_plus      : "https://plus.google.com/u/0/116114631595520695963"
+  github           : "davebenvenuti"
+  google_plus      : "DaveBenvenuti"
   keybase          :
-  instagram        : "https://www.instagram.com/davebenvenuti"
+  instagram        : "davebenvenuti"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/dave-benvenuti-9989556"
+  linkedin         : "dave-benvenuti-9989556"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "davebenvenuti"
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : "DaveBenvenuti"
 
 
 # Reading Files
