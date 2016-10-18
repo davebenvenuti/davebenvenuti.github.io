@@ -1,14 +1,13 @@
 ---
-layout: archive
+layout: single
 author_profile: true
 ---
 
 {% include base_path %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h3 class="archive__subtitle">About me</h3>
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+<p>
+  Dave Benvenuti is a Freelance Software Engineer/Architect specializing in Ruby on Rails, node.js, and frontend Javascript development.
+</p>
 
-{% include paginator.html %}
