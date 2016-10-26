@@ -32,7 +32,7 @@ list.each do |photo|
   puts "writing #{md_filename}..."
 
   src = "https://farm#{photo.farm}.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg"
-  url = "https://www.flickr.com/photos/#{photo.owner.gsub('@', '%40')}/#{photo.id}"
+  url = "https://www.flickr.com/photos/#{photo.owner}/#{photo.id}"
 
   File.open(md_filename, 'w') do |f|
     f.puts "---\nid: #{photo.id}\ntitle: #{photo.title}\nsrc: \"#{src}\"\nflickr_url: \"#{url}\"\n---"
