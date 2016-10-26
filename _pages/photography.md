@@ -7,7 +7,7 @@ permalink: /photography
 
 {% for photo in site.photos %}
  <a href="{{ photo.flickr_url }}" boner="wat">
-    ![{{ photo.name }}]({{ photo.src }})] 
+    ![{{ photo.name }}]({{ photo.src }})
  </a>
 {% endfor %}
 
