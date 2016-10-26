@@ -3,5 +3,8 @@ main:
   - title: "About"
     url: /
 
+  - title: "Photography"
+    url: /photography
+
   - title: "Projects"
     url: /projects

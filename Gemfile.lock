@@ -20,6 +20,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
     ffi (1.9.14-x64-mingw32)
+    flickraw (0.9.9)
     forwardable-extended (2.6.0)
     gemoji (2.1.0)
     github-pages (96)
@@ -138,6 +139,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  flickraw
   github-pages
 
 BUNDLED WITH

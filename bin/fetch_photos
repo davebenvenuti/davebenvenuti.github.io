@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'flickraw'
+
+FlickRaw.api_key=ENV['FLICKR_API_KEY']
+FlickRaw.shared_secret=ENV['FLICKR_API_SECRET']
+
+if ENV['FLICKR_ACCESS_TOKEN'] && ENV['FLICKR_ACCESS_SECRET']
+  flickr.access_token = ENV['FLICKR_ACCESS_TOKEN']
+  flickr.access_secret = ENV['FLICKR_ACCESS_SECRET']
+else
+  token = flickr.get_request_token
+  auth_url = flickr.get_authorize_url(token['oauth_token'], :perms => 'delete')
+
+  puts "Open this url in your process to complete the authication process : #{auth_url}"
+  puts "Copy here the number given when you complete the process."
+  verify = gets.strip
+
+  flickr.get_access_token(token['oauth_token'], token['oauth_token_secret'], verify)
+  login = flickr.test.login
+  puts "You are now authenticated as #{login.username} with token #{flickr.access_token} and secret #{flickr.access_secret}"
+  puts "Please set FLICKR_ACCESS_TOKEN and FLICKR_ACCESS_SECRET"
+
+  flickr.access_token = flickr.access_token
+  flickr.access_secret = flickr.access_secret
+end
+
+list = flickr.photos.search(user_id: 'me', tags: 'davebenvenuti.me')
+
+list.each do |photo|
+  md_filename = "_photos/#{photo.id}.md"
+  puts "writing #{md_filename}..."
+
+  src = "https://farm#{photo.farm}.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg"
+  url = "https://www.flickr.com/photos/#{photo.owner.gsub('@', '%40')}/#{photo.id}"
+
+  File.open(md_filename, 'w') do |f|
+    f.puts "---\nid: #{photo.id}\ntitle: #{photo.title}\nsrc: \"#{src}\"\nflickr_url: \"#{url}\"\n---"
+  end
+end
