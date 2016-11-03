@@ -26,6 +26,7 @@ The cloud is amazing, but it's also complex. Rubber is a tool for managing cloud
 
 ### SimpleRSA
 [https://pypi.python.org/pypi/simplersa](https://pypi.python.org/pypi/simplersa)
+[https://github.com/davebenvenuti/simplersa](https://github.com/davebenvenuti/simplersa)
 
 A simple wrapper for M2Crypto's RSA functionality
 
