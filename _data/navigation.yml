@@ -3,11 +3,11 @@ main:
   - title: "About"
     url: /
 
-  - title: "Photography"
-    url: /photography
-
   - title: "Projects"
     url: /projects
 
   - title: "Resume"
     url: "/Dave_Benvenuti_-_Resume.pdf"
+
+  - title: "Photography"
+    url: /photography
